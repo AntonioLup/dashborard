@@ -1,0 +1,18 @@
+.freelancers {
+  border-radius: 10px;
+  margin: 0.3rem;
+}
+.FLNames {
+  background-color: rgb(168, 50, 50);
+  border-radius: 10px;
+  margin: 0.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.FLNamesEtiqueta {
+  padding: 0.5rem ;
+  font-size: 1.3rem;
+  
+
+}
