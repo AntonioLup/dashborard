@@ -5,7 +5,7 @@ function Account() {
   return (
     <div>
       <h1>Account</h1>
-      <Link to={"/"}>Dashboard</Link>
+      <Link to={"/home"}>Dashboard</Link>
     </div>
   );
 }

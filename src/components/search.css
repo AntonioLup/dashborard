@@ -1,0 +1,25 @@
+.search {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+}
+.search form {
+  width: 100%;
+}
+.search form input {
+  background-color: rgba(106, 36, 36, 0.228);
+  padding: 0.5rem;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 1rem;
+}
+.lupa {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  transform:translateX(38%);
+}

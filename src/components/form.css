@@ -3,12 +3,12 @@
     flex-direction:column;
     justify-content: center;
     margin: 0.5rem auto;
-    
+    gap: 15px;
     padding: 1rem;
     border-radius:10px;
 }
 .form input[type="text"]{
-   
+    
     margin: 0.5rem auto;
     border: none;
     border-bottom: 1px solid #fff;

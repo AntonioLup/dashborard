@@ -2,17 +2,45 @@
   border-radius: 10px;
   margin: 0.3rem;
 }
+.expan {
+  padding: 1.5rem;
+}
 .FLNames {
-  background-color: rgb(168, 50, 50);
+  background-color: rgba(168, 50, 50, 0.053);
   border-radius: 10px;
   margin: 0.3rem;
   display: flex;
   flex-direction: column;
 }
+.OptionContainer {
+  display: flex;
+  padding: 0.4rem;
 
+  width: 100%;
+}
+.OptionContainer label {
+  margin: 0 0.2rem;
+  display: block;
+}
+.OptionContainer input {
+  margin: 0 0.2rem;
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+}
 .FLNamesEtiqueta {
-  padding: 0.5rem ;
+  padding: 0.2rem;
   font-size: 1.3rem;
-  
-
+}
+@media screen and(max-width: 768px) {
+  .frelancer {
+   display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and(min-width: 768px) {
+  .frelancer {
+   display: none;
+    
+  }
 }

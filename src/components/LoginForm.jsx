@@ -12,7 +12,7 @@ function LoginForm() {
       {(popupState) => (
         <div>
           <Button variant="contained" {...bindTrigger(popupState)}>
-            Login Form
+            Login / Register
           </Button>
           <Popover
             {...bindPopover(popupState)}

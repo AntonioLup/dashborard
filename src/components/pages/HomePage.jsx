@@ -1,44 +1,44 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, Outlet, useOutletContext } from "react-router-dom";
 import LogicForm from "../LoginForm";
 import Freelancers from "../Freelancers";
 import Layout from "../Layout";
 import reactLogo from "../../assets/react.svg";
+import OptionPages from "../OptionPages";
+import Search from "../Search";
+import Users from "./Users";
 
 function HomePage() {
-  const FLlist = [
-    {
-      nombre: "Antonio",
-      email: "Antonio@gmail.com",
-      phone: 52352355,
-    },
-    {
-      nombre: "jolimbo",
-      email: "jolimbo@gmail.com",
-      phone: 1343151,
-    },
-    {
-      nombre: "kiko",
-      email: "kiko@gmail.com",
-      phone: 6242464,
-    },
-  ];
+  const [user, SetUser] = useState();
+  const [search, SetSearch] = useState("");
+  const [check, SetChecked] = useState([]);
   return (
     <div className="App">
       <div className="AppNavbar">
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <picture>
+          <Link href="/" target="_blank">
+            <img src={reactLogo} className="logo react" alt="React logo" />
+          </Link>
+        </picture>
 
         <LogicForm />
 
-        <Freelancers Props={FLlist} />
-        <Link to={"/home"}>Home</Link>
+        <Freelancers user={user} check={check} SetChecked={SetChecked} />
         <Link to={"/account"}>Account</Link>
       </div>
       <div className="card">
         <h1>dashboard</h1>
-        <Layout />
+        <OptionPages />
+        <Outlet
+          context={{
+            user: user,
+            SetChecked: SetChecked,
+            check: check,
+            SetSearch: SetSearch,
+            search: search,
+            SetUser: SetUser,
+          }}
+        />
       </div>
     </div>
   );
